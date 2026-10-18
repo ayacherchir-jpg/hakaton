@@ -1,0 +1,11 @@
+// Contenu PRÉDÉFINI (non généré par IA), utilisé quand l'API est indisponible. L'interface l'indique clairement.
+const C = {
+  calm: { title: 'Respire, on ralentit 🌿', activity: 'Fais 5 respirations lentes : inspire 4 secondes, expire 6 secondes.', action: 'Pose ton téléphone 5 minutes et bois un verre d’eau.', encouragement: 'Tu n’as rien à prouver en ce moment.' },
+  exam: { title: 'Un chapitre à la fois 📚', activity: 'Choisis un seul chapitre et lance un minuteur de 20 minutes.', action: 'Note les 3 points les plus importants, puis fais une vraie pause.', encouragement: 'Tu n’as pas besoin de tout terminer maintenant.' },
+  career: { title: 'Un refus ne te définit pas 💼', activity: 'Améliore une seule partie de ton CV aujourd’hui.', action: 'Envoie une candidature bien ciblée plutôt que dix au hasard.', encouragement: 'Ton parcours compte, même quand les réponses tardent.' },
+  affirm: { title: 'Petite victoire du jour 💗', activity: 'Écris une chose que tu as faite aujourd’hui, même minuscule.', action: 'Dis-toi à voix haute ce que tu dirais à une amie à ta place.', encouragement: 'Tu peux faire une pause sans avoir à la mériter.' },
+  metime: { title: 'Un moment pour toi 🌷', activity: 'Choisis quelque chose de simple qui te fait du bien : une chanson, un thé, une marche.', action: 'Réserve-le dans ton calendrier pour qu’il compte vraiment.', encouragement: 'Ton repos a de la valeur.' }
+};
+const E = { happy: 'Ça fait plaisir de te savoir de bonne humeur.', calm: 'Tu sembles sereine, profite de ce calme.', sad: 'Merci de l’avoir noté, c’est permis de se sentir triste.', stressed: 'Tu as choisi « stressée » : c’est une période chargée, et c’est normal de le ressentir.', tired: 'Tu as choisi « fatiguée » : ton corps te demande peut-être du doux.', discouraged: 'Se sentir découragée arrive, surtout quand les résultats tardent.' };
+export const fallbackSupport = ({ mood, context }) => ({ ...(C[context] || C.calm), empathy: E[mood] || E.calm });
+export const AFFIRM = ['Je fais de mon mieux, et c’est déjà beaucoup.', 'Mon rythme est valable.', 'Une petite avancée reste une avancée.', 'Je peux me reposer sans me justifier.', 'Mes résultats ne résument pas ma valeur.', 'J’ai déjà surmonté des moments difficiles.'];
